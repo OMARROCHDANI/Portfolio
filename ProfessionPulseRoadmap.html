@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProfessionPulse Roadmap</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        background: url(images/ProfessionPulse_Roadmap.jpg) no-repeat center
+          fixed;
+        background-size: cover;
+        color: #fff;
+        padding: 2em;
+      }
+      body::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: fixed;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        margin: 0.3rem;
+        font-size: 3em;
+      }
+      h2 {
+        margin-bottom: 0.5em;
+      }
+      .title {
+        text-align: center;
+      }
+      .title h1 {
+        color: black;
+      }
+      .title p {
+        color: #ffbd39;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+      }
+      .timeline {
+        margin: 5em auto;
+        max-width: 34.15em;
+      }
+      .checkpoint {
+        max-width: 34em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        position: relative;
+      }
+
+      .checkpoint div {
+        content: "";
+        background: rgba(0, 0, 0, 0.7);
+        border: 2px solid black;
+        border-radius: 1em;
+        padding: 1.5em;
+      }
+      .checkpoint p {
+        line-height: 27px;
+        color: #ffbd39;
+      }
+      .checkpoint:nth-child(odd) {
+        border-left: 3px solid #888;
+        padding-left: 3em;
+        transform: translate(17em);
+      }
+      .checkpoint:nth-child(even) {
+        border-right: 3px solid #888;
+        padding-right: 3em;
+        transform: translate(-17em);
+      }
+      .checkpoint:nth-child(odd)::before,
+      .checkpoint:nth-child(even)::before {
+        content: "";
+        background: #888;
+        width: 3em;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .checkpoint:nth-child(odd)::before {
+        left: 0;
+      }
+      .checkpoint:nth-child(even)::before {
+        right: 0;
+      }
+      .checkpoint:nth-child(odd) div::before,
+      .checkpoint:nth-child(even) div::before {
+        content: "";
+        background: #fff;
+        box-shadow: 0 0 0.5em #ffbd39;
+        width: 0.8em;
+        height: 0.8em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+      }
+
+      .checkpoint:nth-child(odd) div::before {
+        left: -0.5em;
+      }
+      .checkpoint:nth-child(even) div::before {
+        right: -0.5em;
+      }
+
+      @media screen and (max-width: 1150px) {
+        .timeline {
+          width: 80vw;
+        }
+        .timeline .checkpoint {
+          width: 100%;
+          transform: none;
+          padding-left: 0;
+          padding-right: 0;
+          border: none;
+        }
+        .timeline .checkpoint::before {
+          width: 3px;
+          height: 4em;
+          top: -2em;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .timeline .checkpoint div::before {
+          top: -0.5em;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>ProfessionPulse</h1>
+      <p>Roadmap</p>
+    </div>
+    <div class="timeline">
+      <!-- create many checkpoints as you want -->
+      <div class="checkpoint">
+        <div>
+          <h2>1-Enhance Web Scraping Logic:</h2>
+          <p>
+            Make the web scraping process get more informations about the
+            scraped jobs like Company informations, location , Job Type
+            (Full-time, Part-time, Contract, Internship, etc.) Job
+            Category/Industry, Job Description, Required Qualifications,
+            ,Experience Level, Education Level, Language requirements... Use
+            Headless Browsers Mixing Periodic and Real-Time Scraping: strategy
+            of mixing periodic and real-time scrapingh to balance efficiency and
+            freshness. Database Storage for Real-Time Results: for enhancing
+            user experience, but I must be mindful of data validity and database
+            size. Monitoring and Iteration: Regularly monitor the performance of
+            your scraping processes, database size, and user feedback. Iterate
+            on your strategy based on observations and user needs.
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>2-Apply filtering :</h2>
+          <p>apply filters to refine the dataset based on specific criteria</p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>3-Front-end Development:</h2>
+          <p>
+            Improve UI/UX: Enhance the user interface to make it user-friendly.
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>4-Database Integration:</h2>
+          <p>
+            Integrate a database (e.g., SQLite, PostgreSQL) to store scraped
+            data persistently. Use Django's models to define the database schema
+            and interact with the database.
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>5-Data Cleaning:</h2>
+          <p>
+            Pandas: Learn how to clean and preprocess data using Pandas.
+            Handling Missing Data: Implement strategies to handle missing
+            values.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>6-Job Alerts :</h2>
+          <p>
+            Setting job alerts based on the search criteria , this will enable
+            users to receive notifications when new relevant jobs are available
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>7-Job Alerts :</h2>
+          <p>
+            Setting job alerts based on the search criteria , this will enable
+            users to receive notifications when new relevant jobs are available
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>8-Performance Optimization :</h2>
+          <p>
+            Implement caching mechanisms to reduce the frequency of scraping and
+            improve performance Implement Rate Limiting Use APIs When Available
+            Optimize Scraping Frequency
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>9-Exploratory Data Analysis (EDA):</h2>
+          <p>
+            Matplotlib and Seaborn: Visualize data using these libraries.
+            Descriptive Statistics: Understand basic statistical measures for
+            EDA.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>10-Machine Learning and AI:</h2>
+          <p>
+            Job Recommendation System: Implement a simple job recommendation
+            system using machine learning algorithms. Collaborative filtering or
+            content-based filtering could be good starting points.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>11-Email Notifications:</h2>
+          <p>
+            Set up email notifications for users based on their preferences or
+            saved searches. Use Django's email sending capabilities.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>12-Machine Learning Concepts :</h2>
+          <p>
+            Scikit-Learn: Implement simple machine learning models for
+            prediction. Sentiment Analysis:Apply sentiment analysis techniques
+            to analyze user feedback and reviews of job listings or companies.
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>13-Predictive Modeling :</h2>
+          <p>
+            Implement machine learning models for predicting outcomes like
+            salary based on job description.
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>14-Data Visualization:</h2>
+          <p>
+            Create visualizations to represent insights from data analysis. Use
+            Matplotlib, Seaborn, or other relevant tools.
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>15-Jupyter Notebooks and Documentation:</h2>
+          <p>
+            Create Jupyter notebooks or reports to document your analysis.
+            Explain each step, including code comments and markdown cells
+          </p>
+        </div>
+      </div>
+      <div class="checkpoint">
+        <div>
+          <h2>16-Data Analytics Dashboard:</h2>
+          <p>
+            Create a data analytics dashboard using Django REST framework and a
+            JavaScript library (e.g., Chart.js). Visualize trends in job
+            listings
+          </p>
+        </div>
+      </div>
+
+      <div class="checkpoint">
+        <div>
+          <h2>17-NLP Integration:</h2>
+          <p>
+            Learn NLP Basics Implement Basic Text Processing (Tokenization, Stop
+            Words) Optional: Simple Text Classification (e.g., Sentiment
+            Analysis) Optional: Named Entity Recognition (NER)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
